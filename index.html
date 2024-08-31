@@ -5,14 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog-Café</title>
+
+    <meta name="description" content="Página web de un blog de café con cursos">
+
+    <!-- PREFETCH -->
+    <link rel="PREFETCH" href="nosotros.html" as="document">
+
+
+
+    <!-- PRELOAD -->
+    <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        as="font" crossorigin="crossorigin">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="https://fonts.googleapis.com" as="font" crossorigin="crossorigin">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com" as="font" crossorigin="crossorigin">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
 
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -45,7 +62,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="Imagen del bloc">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="Imagen del bloc">
+                    </picture>
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Tipos de Grano de Café</h4>
@@ -57,7 +77,10 @@
             </article>
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="Imagen del bloc">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="Imagen del bloc">
+                    </picture>
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Tres Deliciosas Recetas de Café</h4>
@@ -69,7 +92,10 @@
             </article>
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="Imagen del bloc">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="Imagen del bloc">
+                    </picture>
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Beneficios del Café</h4>
@@ -87,14 +113,14 @@
                     <h4 class="no-margin">Técnicas de Extracción de Café</h4>
                     <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
                     <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información</a>
+                    <a href="entrada.html" class="boton boton--secundario">Más Información Sobre Cursos</a>
 
                 </li>
                 <li class="widget-curso">
                     <h4 class="no-margin">Cuatro Recetas de Café para Principiantes</h4>
                     <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
                     <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información</a>
+                    <a href="entrada.html" class="boton boton--secundario">Más Información Sobre Cursos</a>
 
                 </li>
             </ul>
@@ -118,6 +144,8 @@
         </div>
     </footer>
 
+    <script src="js/modernizr.js"></script>
+        
 </body>
 
 </html>

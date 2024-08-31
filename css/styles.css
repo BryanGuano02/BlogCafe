@@ -78,8 +78,14 @@ img {
 }
 
 /* HEADER */
-.header {
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+.no-webp .header {
     background-image: url(../img/banner.jpg);
+}
+
+.header {
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -164,12 +170,17 @@ img {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width: 768px) {
     .boton {
         display: inline-block;
     }
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 .boton--primario {
@@ -225,17 +236,19 @@ img {
     .sobre-nosotros {
         display: flex;
         justify-content: space-between;
-        /* gap: 2rem; */ /* No tiene mucho soporte */
+        /* gap: 2rem; */
+        /* No tiene mucho soporte */
 
     }
 
     .sobre-nosotros__imagen,
     .sobre-nosotros__texto {
-        /* flex-basis: 50%; */ /* Otra forma conrnqoco más de soporte */
+        /* flex-basis: 50%; */
+        /* Otra forma conrnqoco más de soporte */
         flex: 0 0 calc(50% - 1rem);
     }
 
-        
+
 
     /* Forma con grid */
     /* .sobre-nosotros {
@@ -247,12 +260,12 @@ img {
 
 /* CURSOS */
 
-.curso{
+.curso {
     padding: 3rem 0;
     border-bottom: 1px solid var(--gris);
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .curso {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -260,7 +273,7 @@ img {
     }
 }
 
-.curso:last-of-type{
+.curso:last-of-type {
     border: none;
 }
 
@@ -278,3 +291,37 @@ img {
     font-size: 2rem;
 }
 
+/* CONTACTO */
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 20rem;
+}
